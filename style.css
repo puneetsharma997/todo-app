@@ -1,0 +1,187 @@
+body
+{
+    display: flex;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+    
+/* left div setting */
+#leftdiv
+{
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(-45deg, #9ecfe0, #96ebd7, #eeb8a7, #e7aac2);
+    background-size: 400% 400%;
+    animation: gradient 9s ease infinite;
+}
+
+
+/* right div setting */
+#rightdiv
+{
+    flex: 1;
+    height: 100%;
+    background: linear-gradient(-45deg, #eeb8a7, #e7aac2, #9ecfe0, #96ebd7);
+    background-size: 400% 400%;
+    animation: gradient 9s ease infinite;
+}
+
+
+/* input box ki settings */
+#inputbox
+{
+    width: 100%;
+    height: 50%;
+    margin-top: 70px;
+    background: transparent;
+    border: none;
+    font-size: 2em;
+}
+
+
+/* container ki settings jisme buttons and text hai */
+#container
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#ButtonContainer
+{
+    margin-top: 18px;
+}
+#deleteButton i{
+    pointer-events: none;
+}
+
+
+#editButton i{
+    pointer-events: none;
+}
+
+
+
+/* task jisme text h uski settings */
+#nameOfTask
+{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+
+/* read button ki settings */
+#readButton
+{
+    flex: 1;
+    /* margin-left: 100px; */
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    margin-top: 14px;
+    width: 40px;
+    height: 15px;
+    cursor: pointer;
+}
+
+
+/* delete button ki settings */
+#deleteButton
+{
+    flex: 1;
+    margin-left: 100px;
+    margin-top: 14px;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    width: 55px;
+    height: 23px;
+    cursor: pointer;
+}
+
+
+/* edit button ki settings */
+#editButton
+{
+    flex: 1;
+    margin-left: 100px;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    margin-top: 14px;
+    width: 55px;
+    height: 23px;
+    cursor: pointer;
+}
+
+
+/* heading ki settings */
+.heading
+{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+/* heading me hover effect  */
+.heading:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+  
+.heading:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/* subheading ki settings */
+.subheading
+{
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}  
+
+/* subheading me hover effect */
+.subheading::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+    width: 10%;
+    height: 1.1px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.subheading:hover::before{
+    width: 100%;
+}
+
+
